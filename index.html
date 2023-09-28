@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/30279ddcaf.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    
+</head>
+<body>
+    <header>
+        <h1>BATO BATO PICK</h1>
+    </header>
+        <div id="user-input">
+            <h2>Let's the Game Begin !
+    <input type="text" id="username" placeholder="USERNAME" required>
+    <button id="playButton">Play</button>
+        </div>
+    <div ">  
+      <div class="score-board">
+        <div  id="player-side" class="badge"></div>
+        <div id="draw-side" class="badge">Draw</div>
+        <div id="bot-side" class="badge">Bot</div>
+        <span id="player-score">0</span>:<span id="draw-score">0</span>:<span id="bot-score" >0</span>
+      </div>
+        <div class="result">
+            <p>BATO BATO PICK. Panalo ka!!!</p>
+        </div>
+        <div class="choices">
+            <div class="choice" id="rock">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM0KT_nSJEbKFdchwfKsk_J-Wz5yuFeKUMfA&usqp=CAU" alt="rock" width="90">
+            </div>
+             <div class="choice" id="paper">
+                <img src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/raised-hand.png" alt="paper" width="90">
+            </div>
+             <div class="choice" id="scissor">
+                <img src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/victory-hand.png" alt="scissor" width="90">
+            </div>
+           
+        </div>
+         <div id="select">Pili ka <br>
+         <button id="resetBtn" class="reset" type="reset">Reset</button>
+        </div>
+    </div> 
+
+         <script src="script.js"></script>
+</body>
+</html>
