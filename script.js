@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
   const playButton = document.getElementById("playButton");
   const usernameInput = document.getElementById("username");
-    const userInput = document.getElementById("user-input");
-    const playerSide = document.getElementById("player-side");
+  const userInput = document.getElementById("user-input");
+  const playerSide = document.getElementById("player-side");
 
   playButton.addEventListener("click", function () {
     userInput.style.display = "none";
-      const username = usernameInput.value;
-      if (username.trim() !== "") {
-          playerSide.textContent = username;
-          usernameInput.style.display = "none";
-          playButton.style.display = "none";
-      }
-      }); 
+    const username = usernameInput.value;
+    if (username.trim() !== "") {
+      playerSide.textContent = username;
+      usernameInput.style.display = "none";
+      playButton.style.display = "none";
+    }
+  });
 });
-    
+
 let playerScore = 0;
 let Tie = 0;
 let botScore = 0;
@@ -85,23 +85,21 @@ function move(playerChoice) {
       break;
   }
 }
-  function resetScoreboard(resetBtn) {
-    playerScore = 0;
-    Tie = 0;
-    botScore = 0;
-    playerScore_span.innerHTML = "0";
-    draw_span.innerHTML = "0";
-    botScore_span.innerHTML = "0";
-    result_p.innerHTML = "BATO BATO PICK. Panalo ka!!!";
-  }
-
+function resetScoreboard(resetBtn) {
+  playerScore = 0;
+  Tie = 0;
+  botScore = 0;
+  playerScore_span.innerHTML = "0";
+  draw_span.innerHTML = "0";
+  botScore_span.innerHTML = "0";
+  result_p.innerHTML = "BATO BATO PICK. Panalo ka!!!";
+}
 
 function main() {
   rock_div.addEventListener("click", () => move("rock"));
   paper_div.addEventListener("click", () => move("paper"));
-    scissor_div.addEventListener("click", () => move("scissor"));
-    const resetBtn = document.getElementById("resetBtn");
-    resetBtn.addEventListener("click", resetScoreboard);
+  scissor_div.addEventListener("click", () => move("scissor"));
+  const resetBtn = document.getElementById("resetBtn");
+  resetBtn.addEventListener("click", resetScoreboard);
 }
 main();
-
