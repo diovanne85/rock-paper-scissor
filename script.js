@@ -1,3 +1,13 @@
+var playStart = new Audio("start.wav");
+var resetSound = new Audio("reset.mp3");
+var music = new Audio("joyful.mp3");
+var pickSound = new Audio("pick.wav")
+music.loop = true;
+music.volume = 0.05;
+playStart.volume = 0.05;
+resetSound.volume = 0.05;
+pickSound.volume = 0.05;
+
 document.addEventListener("DOMContentLoaded", function () {
   const playButton = document.getElementById("playButton");
   const usernameInput = document.getElementById("username");
@@ -5,12 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const playerSide = document.getElementById("player-side");
 
   playButton.addEventListener("click", function () {
+    playStart.play();
     userInput.style.display = "none";
     const username = usernameInput.value;
     if (username.trim() !== "") {
       playerSide.textContent = username;
       usernameInput.style.display = "none";
       playButton.style.display = "none";
+      music.play();
     }
   });
 });
@@ -66,6 +78,7 @@ function draw(playerChoice, botChoice) {
 }
 
 function move(playerChoice) {
+  pickSound.play();
   const botChoice = getBotChoice();
   switch (playerChoice + botChoice) {
     case "rockscissor":
@@ -93,6 +106,7 @@ function resetScoreboard(resetBtn) {
   draw_span.innerHTML = "0";
   botScore_span.innerHTML = "0";
   result_p.innerHTML = "BATO BATO PICK. Panalo ka!!!";
+  resetSound.play();
 }
 
 function main() {

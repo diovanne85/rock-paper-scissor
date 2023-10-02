@@ -12,10 +12,12 @@
     <header>
         <h1>BATO BATO PICK</h1>
     </header>
-        <div id="user-input">
+        <div id="user-input" >
             <h2>Let's the Game Begin !
     <input type="text" id="username" placeholder="USERNAME" required>
-    <button id="playButton">Play</button>
+    
+    <button id="playButton" >Play</button>
+   
         </div>
     <div ">  
       <div class="score-board">
@@ -27,7 +29,7 @@
         <div class="result">
             <p>BATO BATO PICK. Panalo ka!!!</p>
         </div>
-        <div class="choices">
+        <div class="choices" onclick="soundEffect(clicked)">
             <div class="choice" id="rock">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM0KT_nSJEbKFdchwfKsk_J-Wz5yuFeKUMfA&usqp=CAU" alt="rock" width="90">
             </div>
@@ -43,7 +45,6 @@
          <button id="resetBtn" class="reset" type="reset">Reset</button>
         </div>
     </div> 
-
          <script src="script.js"></script>
 </body>
 </html>
